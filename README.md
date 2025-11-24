@@ -37,7 +37,7 @@ This tool exposes routing correctness before events ever leave the producer.
 
 ## Features (MVP)
 
-The first version will include:
+The prototype will include:
 
 - **Routing Rule Builder** – select fields, operators, and values to simulate real filter logic  
 - **Event Payload Preview** – choose or edit a sample event to test routing paths  
@@ -164,7 +164,7 @@ https://github.com/rtfenter/Systems-of-Trust-Series
 ## Status
 
 MVP is implemented and active.  
-The first version will focus on **rule evaluation, contract mismatch detection, and routing simulation**, not a full event bus configuration system.
+This prototype will focus on **rule evaluation, contract mismatch detection, and routing simulation**, not a full event bus configuration system.
 
 ---
 
