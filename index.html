@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Routing Contract Checker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="page-header-inner">
+      <h1>Event Routing Contract Checker</h1>
+      <p class="tagline">
+        Validate routing rules and filtering logic before events ship, so they flow where you expect.
+      </p>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- LEFT PANEL: CONTROLS + SUMMARY + SAMPLE EVENT -->
+    <section class="panel panel-controls">
+      <div class="panel-header">
+        <h2>Scenario &amp; Summary</h2>
+      </div>
+
+      <div class="field">
+        <label for="scenario-select">Routing Scenario</label>
+        <select id="scenario-select" class="select">
+          <!-- Options injected by app.js -->
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="event-select">Sample Event</label>
+        <select id="event-select" class="select">
+          <!-- Options injected by app.js -->
+        </select>
+      </div>
+
+      <p id="scenario-description" class="concept-description">
+        Select a scenario and sample event to see how routing rules behave.
+      </p>
+
+      <div id="summary" class="summary">
+        <div id="summary-badge" class="summary-badge summary-badge-idle">
+          No event evaluated yet.
+        </div>
+      </div>
+
+      <div class="legend">
+        <h3>Impact Legend</h3>
+        <ul>
+          <li>
+            <span class="legend-dot legend-low"></span>
+            Low impact – routes match and contracts look healthy
+          </li>
+          <li>
+            <span class="legend-dot legend-medium"></span>
+            Medium impact – event routes, but contract issues exist
+          </li>
+          <li>
+            <span class="legend-dot legend-high"></span>
+            High impact – silent drop or major routing failure
+          </li>
+        </ul>
+      </div>
+
+      <div class="notes-card">
+        <h3>How to Use This Checker</h3>
+        <p>
+          Pick a routing scenario, then choose a sample event. The checker evaluates all routing
+          rules, shows which ones pass or fail, and visualizes where the event goes.
+        </p>
+        <p>
+          Use this to catch filters that never match, routes that drop events, and contracts that
+          expect fields the event no longer emits.
+        </p>
+      </div>
+
+      <div class="event-card">
+        <h3>Sample Event Payload</h3>
+        <pre id="event-json" class="event-json">
+// Select a scenario and event to see the payload here.
+        </pre>
+      </div>
+    </section>
+
+    <!-- RIGHT PANEL: ROUTING MAP + DETAILS -->
+    <section class="panel panel-map">
+      <div class="panel-header">
+        <h2>Routing Simulation</h2>
+      </div>
+
+      <div id="routing-map-container" class="routing-map-container">
+        <p class="map-empty">
+          Select a scenario and sample event to render the routing paths.
+        </p>
+      </div>
+
+      <div id="details-card" class="details-card">
+        <h3>Rule Evaluation &amp; Contract Checks</h3>
+        <p class="details-empty">
+          After you pick an event, this section will summarize which rules matched and any contract
+          violations that could cause silent drops or misrouting.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>
+      Part of the
+      <a href="https://github.com/rtfenter/Systems-of-Trust-Series" target="_blank" rel="noreferrer">
+        Systems of Trust Series
+      </a>.
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
