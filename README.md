@@ -170,7 +170,7 @@ The first version will focus on **rule evaluation, contract mismatch detection, 
 
 ## Local Use
 
-Everything will run client-side.
+Everything runs client-side.
 
 To run locally (once the prototype is implemented):
 
