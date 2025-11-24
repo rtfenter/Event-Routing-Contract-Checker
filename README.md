@@ -52,7 +52,8 @@ This tool focuses on routing correctness, not full event governance or schema ma
 ---
 
 ## Demo Screenshot
-<img width="2696" height="1556" alt="Screenshot — Event Routing Contract Checker" src="https://github.com/user-attachments/assets/placeholder-event-routing-contract-checker.png" />
+
+<img width="2804" height="1908" alt="Screenshot 2025-11-24 at 09-07-10 Event Routing Contract Checker" src="https://github.com/user-attachments/assets/20c35d1c-5cd2-49ea-b705-ee36a8f3039e" />
 
 ---
 
@@ -162,7 +163,7 @@ https://github.com/rtfenter/Systems-of-Trust-Series
 
 ## Status
 
-MVP planned and in progress.  
+MVP is implemented and active.  
 The first version will focus on **rule evaluation, contract mismatch detection, and routing simulation**, not a full event bus configuration system.
 
 ---
