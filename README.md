@@ -37,7 +37,7 @@ This tool exposes routing correctness before events ever leave the producer.
 
 ## Features (MVP)
 
-The prototype will include:
+This prototype includes:
 
 - **Routing Rule Builder** – select fields, operators, and values to simulate real filter logic  
 - **Event Payload Preview** – choose or edit a sample event to test routing paths  
