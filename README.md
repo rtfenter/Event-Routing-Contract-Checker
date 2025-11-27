@@ -57,8 +57,9 @@ This tool focuses on routing correctness, not full event governance or schema ma
 
 ---
 
-## Event Routing Flow Diagram
+## Routing Decision Flow Diagram
 
+```
     Incoming Event (v1 or v2)
            |
            v
@@ -74,6 +75,7 @@ This tool focuses on routing correctness, not full event governance or schema ma
    |              |
  Downstream     Analytics
  Services       Storage
+```
 
 The checker simulates these routing paths and surfaces any rule or contract violations.
 
@@ -167,7 +169,6 @@ MVP is implemented and active.
 This prototype will focus on **rule evaluation, contract mismatch detection, and routing simulation**, not a full event bus configuration system.
 
 ---
-
 ## Local Use
 
 Everything runs client-side.
